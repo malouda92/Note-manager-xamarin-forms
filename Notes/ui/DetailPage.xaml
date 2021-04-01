@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Notes.ui.DetailPage">
+    <ContentPage.Content>
+        <StackLayout Padding="16">
+           <StackLayout Orientation="Horizontal">
+               <Entry Placeholder="entrer le titre..."
+                      HorizontalOptions="FillAndExpand"
+                      BackgroundColor="White"
+                      IsEnabled="False"
+                      Text="{Binding Title}"/>
+           </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Editor AutoSize="TextChanges"
+                        VerticalOptions="FillAndExpand"
+                        BackgroundColor="White"
+                        Placeholder="votre contenu ici..."
+                        IsEnabled="False"
+                        Text="{Binding Content}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
