@@ -19,5 +19,6 @@
     <Folder Include="ui\" />
     <Folder Include="models\" />
     <Folder Include="repositories\" />
+    <Folder Include="viewModels\" />
   </ItemGroup>
 </Project>

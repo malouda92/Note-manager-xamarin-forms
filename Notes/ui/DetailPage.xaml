@@ -2,22 +2,17 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="Notes.ui.DetailPage">
+    x:Class="Notes.ui.DetailPage"
+    Title="Note">
     <ContentPage.Content>
         <StackLayout Padding="16">
            <StackLayout Orientation="Horizontal">
-               <Entry Placeholder="entrer le titre..."
-                      HorizontalOptions="FillAndExpand"
-                      BackgroundColor="White"
-                      IsEnabled="False"
+               <Label HorizontalOptions="FillAndExpand"
+                      FontAttributes="Bold"
                       Text="{Binding Title}"/>
            </StackLayout>
             <StackLayout VerticalOptions="FillAndExpand">
-                <Editor AutoSize="TextChanges"
-                        VerticalOptions="FillAndExpand"
-                        BackgroundColor="White"
-                        Placeholder="votre contenu ici..."
-                        IsEnabled="False"
+                <Label  VerticalOptions="FillAndExpand"
                         Text="{Binding Content}"/>
             </StackLayout>
         </StackLayout>

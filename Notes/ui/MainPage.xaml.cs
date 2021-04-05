@@ -21,7 +21,7 @@ namespace Notes.ui
             InitializeComponent();
 
             noteRepository = new RepositoryFactory().create<NoteRepository>();
-            
+            notes = new List<Note>();
         }
 
         async void ToolbarItem_Clicked(System.Object sender, System.EventArgs e)
@@ -32,7 +32,7 @@ namespace Notes.ui
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            notes = new List<Note>();
+           
             notes = noteRepository.findAll().ToList<Note>();
             collectionView.ItemsSource = notes.OrderBy(n => n.Title).ToList();
         }

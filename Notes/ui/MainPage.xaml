@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Notes.ui.MainPage">
+             x:Class="Notes.ui.MainPage"
+             Title="List">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Ajouter"
                      Order="Primary"
                      Priority="0"
-                     Clicked="ToolbarItem_Clicked"/>
+                     Clicked="ToolbarItem_Clicked"
+                     IconImageSource="Ajout.png"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
@@ -15,8 +17,7 @@
                            SelectionMode="Single"
                            SelectionChanged="collectionView_SelectionChanged">
                <CollectionView.ItemsLayout>
-                   <LinearItemsLayout Orientation="Vertical"
-                                      ItemSpacing="10"/>
+                   <LinearItemsLayout Orientation="Vertical"/>
                 </CollectionView.ItemsLayout>
                  <CollectionView.ItemTemplate>
                     <DataTemplate>
